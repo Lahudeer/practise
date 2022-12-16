@@ -1,0 +1,22 @@
+一、git 安装（Ubuntu）
+sudo apt-get install git 
+git --version
+
+二、基本操作
+1.设置用户名与邮箱
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+检查配置信息
+git config --list 
+2.初始化仓库
+cd 到仓库所在路径
+git init
+这时候仓库目录下会多了一个.git的隐藏目录，这个目录是Git来跟踪管理版本的，没事不要手动改这个目录里面的文件，否则，会把git仓库给破坏了。想要删掉这个仓库，把.git隐藏目录删掉就好了。
+3. Git核心框架介绍
+工作目录：我们的本地目录(添加、修改文件)
+暂存区域：准备提交到Git仓库的区域
+Git仓库：从暂存区域提交到Git仓库的内容
+向Git仓库提交文件步骤：
+在工作目录添加、修改文件
+将需要提交的文件，放入暂存区域
+将暂存区域的文件 提交到 git仓库
