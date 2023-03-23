@@ -1,6 +1,6 @@
 '''
 Author: hongbinyang
-LastEditTime: 2023-03-16 13:43:45
+LastEditTime: 2023-03-22 13:58:38
 FilePath: /practise/Day2/send_message.py
 '''
 # -*- coding: utf-8 -*-
@@ -13,7 +13,7 @@ import requests
 import json
 
 def get_token():
-    token="t-g1043gdHUVE77NKH5MP2KKQAWGGEOPHRFOCHSRVQ"
+    token="t-g1043mdWUKZRGGD247EJFW3RPL5HFXN63EZFVLI7"
     return token
 
 
