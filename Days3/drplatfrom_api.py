@@ -1,6 +1,6 @@
 '''
 Author: hongbinyang
-LastEditTime: 2023-03-23 16:05:46
+LastEditTime: 2023-03-23 17:24:29
 FilePath: /practise/Days3/drplatfrom_api.py
 '''
 import requests
@@ -52,10 +52,10 @@ class DrPlatformAPI(object):
         data_frame["duration"] = data_frame.endTime - data_frame.startTime
         data_frame["hour"] = data_frame.duration.map(lambda x:x.seconds/3600)
 
-        data_frame = data_frame[["tester","vehicleId","location","taskType","startTime","hour","distance"]]
+        data_frame = data_frame[["tester","vehicleId","location","taskType","startTime","hour"]]
         # return data_frame
         sql_platform = """
-        SELECT tester AS 测试工程师 , vehicleId AS Car_ID , location AS 城市 , DATE(startTime) AS 日期 , SUM(hour) AS 测试时间（h） , SUM(distance) AS 运营里程（KM）
+        SELECT tester AS 测试工程师 , vehicleId AS Car_ID , location AS 城市 , DATE(startTime) AS 日期 , SUM(hour) AS 测试时间（h）
         FROM data_frame
         GROUP BY tester
         """
