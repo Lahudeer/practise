@@ -1,6 +1,6 @@
 '''
 Author: hongbinyang
-LastEditTime: 2023-08-25 15:20:52
+LastEditTime: 2023-08-25 15:52:25
 FilePath: /practise/Day4 /feishu_decuments/access_token.py
 '''
 import requests
@@ -54,7 +54,7 @@ class get_token:
             'Content-Type': "application/json; charset=utf-8"
         }
         data = {
-            'refresh_token': 'ur-fnaGYsoEx8EoJZjEiwSXRDlgn4aggl93oMG0444w2JWR',
+            'refresh_token': 'ur-cFAYtbJv54e9J.VsA_gVpyhl1dpw4lz1jo0041080E13',
             'grant_type': 'refresh_token'
         }
         response = requests.post(url=url, headers=headers, json=data)
